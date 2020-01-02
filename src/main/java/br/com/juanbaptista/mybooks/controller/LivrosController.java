@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import br.com.juanbaptista.mybooks.controller.dto.LivroDto;
 import br.com.juanbaptista.mybooks.dao.LivroDAO;
 
 @RestController

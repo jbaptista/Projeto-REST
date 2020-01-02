@@ -1,4 +1,4 @@
-package br.com.juanbaptista.mybooks.controller;
+package br.com.juanbaptista.mybooks.controller.dto;
 
 import java.util.List;
 import java.util.stream.Collectors;
