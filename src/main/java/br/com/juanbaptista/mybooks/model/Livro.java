@@ -1,15 +1,27 @@
 package br.com.juanbaptista.mybooks.model;
 
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Livro {
 	
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String titulo;
 	private String autor;
 	private String editora;
 	private int paginas;
+	@Enumerated(EnumType.STRING)
 	private StatusLivro status;
 	
-	
+	public Livro() {
+		
+	}
 	
 	public Livro(Long id, String titulo, String autor, String editora, int paginas, StatusLivro status) {
 		super();

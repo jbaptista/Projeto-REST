@@ -1,0 +1,3 @@
+INSERT INTO Livro(titulo, autor, editora, paginas, status) VALUES ('Espaço pra Deus', 'Henri Nouwen', 'Impacto Publicações', 96, 'DISPONIVEL');
+INSERT INTO Livro(titulo, autor, editora, paginas, status) VALUES ('Cristianismo Puro e Simples', 'C. S. Lewis', 'Thomas Nelson', 288, 'DISPONIVEL');
+INSERT INTO Livro(titulo, autor, editora, paginas, status) VALUES ('A Presença', 'Bill Johnson', 'Edilan', 200, 'DISPONIVEL');
