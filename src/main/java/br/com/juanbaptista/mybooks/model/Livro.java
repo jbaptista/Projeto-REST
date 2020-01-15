@@ -23,6 +23,17 @@ public class Livro {
 		
 	}
 	
+	public Livro(String titulo, String autor, String editora, int paginas) {
+		super();
+		this.titulo = titulo;
+		this.autor = autor;
+		this.editora = editora;
+		this.paginas = paginas;
+		this.status = StatusLivro.DISPONIVEL;
+	}
+
+
+
 	public Livro(Long id, String titulo, String autor, String editora, int paginas, StatusLivro status) {
 		super();
 		this.id = id;
