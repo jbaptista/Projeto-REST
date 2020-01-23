@@ -1,9 +1,13 @@
 package br.com.juanbaptista.mybooks.controller.form;
 
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+
 import br.com.juanbaptista.mybooks.model.Livro;
 
 public class LivroForm {
 	
+	@NotNull @NotEmpty
 	private String titulo;
 	private String autor;
 	private String editora;

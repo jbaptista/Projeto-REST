@@ -3,6 +3,8 @@ package br.com.juanbaptista.mybooks.controller;
 import java.net.URI;
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -42,7 +44,7 @@ public class LivrosController {
 	}
 	
 	@PostMapping
-	public ResponseEntity<LivroDto> cadastrar(@RequestBody LivroForm livroForm, UriComponentsBuilder uriBuilder) {
+	public ResponseEntity<LivroDto> cadastrar(@RequestBody @Valid LivroForm livroForm, UriComponentsBuilder uriBuilder) {
 		Livro livro = livroForm.converter();
 		livroRepository.save(livro);
 		
