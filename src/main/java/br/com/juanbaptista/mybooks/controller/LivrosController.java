@@ -8,6 +8,7 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -50,5 +51,12 @@ public class LivrosController {
 		
 		URI uri = uriBuilder.path("/livros/{id}").buildAndExpand(livro.getId()).toUri();
 		return ResponseEntity.created(uri).body(new LivroDto(livro));
+	}
+	
+	@GetMapping("/{id}")
+	public LivroDto detalhar(@PathVariable Long id) {
+		Livro livro = livroRepository.getOne(id);
+		return new LivroDto(livro);
+		
 	}
 }
